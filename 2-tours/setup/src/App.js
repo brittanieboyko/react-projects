@@ -13,6 +13,10 @@ function App() {
     const tours = await response.json();
     console.log(tours);
   };
+  
+  useEffect(() => {
+    fetchTours();
+  }, []);
 
   if (loading) {
     return (
